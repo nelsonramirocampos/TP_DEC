@@ -120,10 +120,10 @@ namespace Decisiones_en_Escenarios_Complejos
 
             for (int columna = 1; columna < grilla.Columns.Count; columna++)
                 {
-                    if (pattern.IsMatch(grilla[columna, 0].Value.ToString()) == false)
-                    {
-                        return false;
-                    }
+                    //if (pattern.IsMatch(grilla[columna, 0].Value.ToString()) == false)
+                    //{
+                    //    return false;
+                    //}
                 }
             
 
@@ -135,14 +135,14 @@ namespace Decisiones_en_Escenarios_Complejos
             Regex pattern = new Regex(@"^[1-9]\d*(\,\d+)?$"); //Numeros y Numeros con coma
 
 
-            for (int fila = 1; fila < grilla.Rows.Count; fila++)
+            for (int fila = 2; fila < grilla.Rows.Count; fila++)
             {
                 for (int columna = 1; columna < grilla.Columns.Count; columna++)
                 {
-                    if (pattern.IsMatch(grilla[columna, fila].Value.ToString()) == false)
-                    {
-                        return false;
-                    }                 
+                    //if (pattern.IsMatch(grilla[columna, fila].Value.ToString()) == false)
+                    //{
+                    //    return false;
+                    //}                 
                 }
             }
 
@@ -239,6 +239,105 @@ namespace Decisiones_en_Escenarios_Complejos
                 txt_nombre_criterio.Text = string.Empty;
                 txt_nombre_criterio.Focus();
             }
+        }
+
+        
+        private void cargarEjemplo()
+        {
+            
+
+            //Columna de las alternativas
+            List<string> alternativa = new List<string>() { "", "A1", "A2", "A3", "A4", "A5", "A6" };
+            for (int fila = 0; fila < alternativa.Count; fila++)
+            {
+                dgv_matriz.Rows.Add(alternativa[fila].ToString());
+            }
+
+
+            List<List<string>> criterio = new List<List<string>>() {
+                new List<string>() {"MIN", "MAX", "MAX", "MAX", "MAX", "MAX" },
+                new List<string>() { "X1", "X2", "X3", "X4", "X5", "X6" }
+            };
+
+            //Columna con MAX/MIN
+            for (int columna = 0; columna < criterio[0].Count; columna++)
+            {
+                dgv_matriz.Columns.Add("C" + columna, criterio[0][columna].ToString());
+            }
+
+            //Fila con los Criterios
+            for (int columna = 0; columna < criterio[1].Count; columna++)
+            {
+                dgv_matriz[columna + 1, 1].Value = criterio[1][columna].ToString();
+            }
+
+            //Columna con las alternativas en pesos
+            for (int columna = 0; columna < criterio[0].Count; columna++)
+            {
+                dgv_pesos.Columns.Add("Cpeso" + columna, criterio[1][columna].ToString());
+            }
+
+
+            //Pesos
+            List<double> W = new List<double>() {
+                0.17051, 0.17512, 0.15668, 0.16590, 0.15668, 0.17512
+            };
+            for (int columna = 0; columna < W.Count; columna++)
+            {
+                dgv_pesos[columna + 1, 0].Value = W[columna].ToString();
+            }
+
+
+
+            //Valores de la matriz
+            List<List<double>> tabla = new List<List<double>>()
+            {
+                new List<double>() {8500, 90,  1.4, 5.2, 7,   6.2},
+                new List<double>() {4750, 85,  1.3, 5.4, 6.2, 5.8},
+                new List<double>() {6300, 105, 0.9, 4.2, 6.4, 5  },
+                new List<double>() {4800, 95,  1.3, 6.4, 4.8, 6.6},
+                new List<double>() {7200, 98,  1.6, 7,   5.6, 6.8},
+                new List<double>() {9400, 93,  1.9, 8.4, 5,   7  }
+            };
+
+            for (int i = 0; i < tabla.Count; i++)
+            {
+                for (int j = 0; j < tabla[i].Count; j++)
+                {
+                    dgv_matriz[j + 1, i + 2].Value = tabla[i][j];
+                }
+            }
+
+
+            dgv_matriz.Rows.RemoveAt(0);
+        }
+
+
+        private void CargarEjemploToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgv_matriz.Columns.Clear();
+
+            dgv_pesos.Rows.Clear();
+            dgv_pesos.Columns.Clear();
+
+            dgv_matriz.Columns.Add("", "");
+            dgv_matriz.Rows.Add();
+            dgv_matriz.Rows[0].Visible = false;
+            dgv_matriz.Rows[0].ReadOnly = true;
+            dgv_matriz.Columns[0].ReadOnly = true;
+
+
+            dgv_pesos.Columns.Add("", "");
+            dgv_pesos.Rows.Add("Peso");
+            dgv_pesos.Rows[0].Visible = true;
+            dgv_pesos.Rows[0].Cells[0].ReadOnly = true;
+
+
+            Estilo.estilo_matriz(dgv_matriz);
+            Estilo.estilo_matriz_peso(dgv_pesos);
+
+
+            cargarEjemplo();
         }
     }
 }
