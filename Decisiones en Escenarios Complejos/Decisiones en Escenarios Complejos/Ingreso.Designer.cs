@@ -49,6 +49,8 @@
             this.btn_continuar_metodo = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarEjemploToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +60,6 @@
             this.cb_metodo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_limpiar = new System.Windows.Forms.Button();
-            this.cargarEjemploToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -196,7 +197,8 @@
             this.dgv_matriz.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_matriz.Size = new System.Drawing.Size(618, 206);
             this.dgv_matriz.TabIndex = 0;
-            this.dgv_matriz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dgv_matriz_KeyDown);
+            this.dgv_matriz.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Dgv_matriz_EditingControlShowing);
+            this.dgv_matriz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dgv_matriz_KeyPress);
             // 
             // panel2
             // 
@@ -227,6 +229,8 @@
             this.dgv_pesos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_pesos.Size = new System.Drawing.Size(618, 66);
             this.dgv_pesos.TabIndex = 0;
+            this.dgv_pesos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Dgv_pesos_EditingControlShowing);
+            this.dgv_pesos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dgv_pesos_KeyPress);
             // 
             // btn_continuar_metodo
             // 
@@ -254,15 +258,30 @@
             // 
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargarEjemploToolStripMenuItem,
+            this.importarToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
+            // cargarEjemploToolStripMenuItem
+            // 
+            this.cargarEjemploToolStripMenuItem.Name = "cargarEjemploToolStripMenuItem";
+            this.cargarEjemploToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cargarEjemploToolStripMenuItem.Text = "Cargar Ejemplo";
+            this.cargarEjemploToolStripMenuItem.Click += new System.EventHandler(this.CargarEjemploToolStripMenuItem_Click);
+            // 
+            // importarToolStripMenuItem
+            // 
+            this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.importarToolStripMenuItem.Text = "Importar";
+            this.importarToolStripMenuItem.Click += new System.EventHandler(this.ImportarToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
@@ -334,13 +353,6 @@
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.Btn_limpiar_Click);
             // 
-            // cargarEjemploToolStripMenuItem
-            // 
-            this.cargarEjemploToolStripMenuItem.Name = "cargarEjemploToolStripMenuItem";
-            this.cargarEjemploToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cargarEjemploToolStripMenuItem.Text = "Cargar Ejemplo";
-            this.cargarEjemploToolStripMenuItem.Click += new System.EventHandler(this.CargarEjemploToolStripMenuItem_Click);
-            // 
             // Ingreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,5 +418,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.ToolStripMenuItem cargarEjemploToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
     }
 }
