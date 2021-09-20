@@ -167,10 +167,6 @@ namespace Decisiones_en_Escenarios_Complejos
             }
         }
 
-        private void Dgv_matriz_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
-
         private void Btn_limpiar_Click(object sender, EventArgs e)
         {
             dgv_matriz.Rows.Clear();
@@ -411,6 +407,50 @@ namespace Decisiones_en_Escenarios_Complejos
             gestor.cargar_import(dgv_matriz, dgv_pesos);
 
 
+        }
+
+        private void Dgv_matriz_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                if (e.KeyChar == (char)Keys.Back || char.IsNumber(e.KeyChar) || e.KeyChar == ',')
+                    e.Handled = false;
+                else
+                    e.Handled = true;
+        }
+
+        private void Dgv_matriz_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            TextBox txt = e.Control as TextBox;
+
+            if (txt != null)
+
+            {
+
+                txt.KeyPress -= new KeyPressEventHandler(Dgv_matriz_KeyPress);
+
+                txt.KeyPress += new KeyPressEventHandler(Dgv_matriz_KeyPress);
+
+            }
+        }
+
+        private void Dgv_pesos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back || char.IsNumber(e.KeyChar) || e.KeyChar == ',')
+                e.Handled = false;
+            else
+                e.Handled = true;
+
+        }
+
+        private void Dgv_pesos_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            TextBox txt = e.Control as TextBox;
+
+            if (txt != null)
+            {
+                txt.KeyPress -= new KeyPressEventHandler(Dgv_pesos_KeyPress);
+
+                txt.KeyPress += new KeyPressEventHandler(Dgv_pesos_KeyPress);
+            }
         }
     }
 }
