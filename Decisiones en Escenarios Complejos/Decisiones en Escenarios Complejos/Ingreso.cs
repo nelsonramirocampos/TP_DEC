@@ -317,6 +317,9 @@ namespace Decisiones_en_Escenarios_Complejos
             dgv_pesos.Rows.Clear();
             dgv_pesos.Columns.Clear();
 
+            dgv_matriz.Rows.Clear();
+            dgv_matriz.Columns.Clear();
+
             dgv_matriz.Columns.Add("", "");
             dgv_matriz.Rows.Add();
             dgv_matriz.Rows[0].Visible = false;
