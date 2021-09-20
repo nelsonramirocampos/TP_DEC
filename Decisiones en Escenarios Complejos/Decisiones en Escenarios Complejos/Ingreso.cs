@@ -1,9 +1,14 @@
-﻿using Decisiones_en_Escenarios_Complejos.Topsis;
+﻿using CsvHelper;
+using CsvHelper.Configuration;
+using Decisiones_en_Escenarios_Complejos.Importador;
+using Decisiones_en_Escenarios_Complejos.Topsis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -315,8 +320,6 @@ namespace Decisiones_en_Escenarios_Complejos
 
         private void CargarEjemploToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dgv_matriz.Columns.Clear();
-
             dgv_pesos.Rows.Clear();
             dgv_pesos.Columns.Clear();
 
@@ -338,6 +341,76 @@ namespace Decisiones_en_Escenarios_Complejos
 
 
             cargarEjemplo();
+        }
+
+        private void ImportarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool criterio = true;
+            bool alternativa = true;
+
+            Gestor_Importador gestor = new Gestor_Importador();
+
+
+            var reader = new StreamReader(File.OpenRead(@"D:\Ejemplo.csv"));
+
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                var value = line.Split(';');
+
+                if (criterio) //Si es un criterio, tiene dos valores TIPO y NOMBRE
+                {
+                    var tipo_criterio = line.Split(';');
+
+                    line = reader.ReadLine();
+                    var nombre_criterio = line.Split(';');
+
+                    for (int i = 0; i < tipo_criterio.Length; i++)
+                    {
+                        gestor.agregarCriterio(nombre_criterio[i].ToString().ToUpper(), tipo_criterio[i].ToString().ToUpper());
+                    }
+
+                    criterio = false; //Ya se termino de leer los criterios
+                }
+                else if (value[0].ToString().Trim().ToUpper().Equals("W"))
+                {
+                    for (int i = 1; i < value.Length; i++)
+                    {
+                        double peso;
+
+                        if (Double.TryParse(Convert.ToString(value[i]).Trim(), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out peso))
+                        {
+                            gestor.agregarPeso(peso);
+                        }
+                    }
+                }
+                else if(alternativa) //Para las demas filas ALTERNATIVA + Valor
+                {
+                    var nombre_alternativas = line.Split(';');
+                    string nombre_alt = "";
+                    List<double> valores = new List<double>();
+
+                    foreach (var v in nombre_alternativas)
+                    {
+                        double retNum;
+
+                        if (Double.TryParse(Convert.ToString(v).Trim(), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum)) 
+                        {
+                            valores.Add(retNum);
+                        }
+                        else
+                        {
+                            nombre_alt = v.ToString().Trim().ToUpper();
+                        }
+                    }
+
+                    gestor.agregarAlternativa(nombre_alt, valores);
+                }
+            }
+
+            gestor.cargar_import(dgv_matriz, dgv_pesos);
+
+
         }
     }
 }
