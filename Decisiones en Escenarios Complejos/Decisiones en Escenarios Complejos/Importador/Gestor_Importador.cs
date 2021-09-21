@@ -43,14 +43,14 @@ namespace Decisiones_en_Escenarios_Complejos.Importador
             grilla.Rows.Add("");
 
 
-            for (int i = 0; i < this.Criterios.Count; i++)
+            for (int i = 0; i < this.Criterios.Count-1; i++)
             {
                 grilla.Columns.Add("c" + i, this.Criterios[i].Tipo_criterio);
                 grilla[i + 1, 0].Value = this.Criterios[i].Nombre_criterio;
             }
 
 
-            for (int i = 0; i < this.Alternativas.Count; i++)
+            for (int i = 0; i < this.Alternativas.Count-2; i++)
             {
                 grilla.Rows.Add(this.Alternativas[i].Alternativa_nueva);
 
@@ -68,7 +68,8 @@ namespace Decisiones_en_Escenarios_Complejos.Importador
             }
 
 
-
+            Estilo.estilo_matriz(grilla);
+            Estilo.estilo_matriz_peso(dgv_pesos);
         }
 
         internal void agregarPeso(double peso)
