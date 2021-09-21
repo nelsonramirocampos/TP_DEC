@@ -23,26 +23,30 @@ namespace Decisiones_en_Escenarios_Complejos
                         var worksheet = workbook.Worksheets.Add("Resultado Final");
 
 
+
                         /* ******* GRILLA PRINCIPAL ******* */
                         cabecera(4, 5, dgv_grilla, worksheet);
                         vertical(5, "E", dgv_grilla, worksheet);
                         criterios(5, 5, true, dgv_grilla, worksheet); //Nombre de los criterios
                         celdas(5, 5, dgv_grilla, worksheet);
-                        mensaje("F2", "Matriz Original", worksheet);
+                        mensaje("F2", "Matriz Original con distancia S+ y S-", worksheet);
 
 
                         /* ******* GRILLA PESO ******* */
-                        cabecera(13, 5, dgv_pesos, worksheet);
-                        criterios(14, 5, false, dgv_pesos, worksheet); //Primera fila
-                        vertical(14, "E", dgv_pesos, worksheet);
-                        mensaje("F11", "Matriz Pesos", worksheet);
+                        int fila_peso = dgv_grilla.Rows.Count + 10;
+                        cabecera(fila_peso - 1, 5, dgv_pesos, worksheet);
+                        criterios(fila_peso, 5, false, dgv_pesos, worksheet); //Primera fila
+                        vertical(fila_peso, "E", dgv_pesos, worksheet);
+                        mensaje("F" + (fila_peso - 3), "Matriz Pesos Normalizados", worksheet);
+
 
                         /* ******* GRILLA RESULTADO ******* */
-                        cabecera(4, 12, dgv_resultado, worksheet);
-                        criterios(5, 12, false, dgv_resultado, worksheet);
-                        vertical(5, "L", dgv_resultado, worksheet);
-                        celdas(5, 12, dgv_resultado, worksheet);
-                        mensaje("L2", "Matriz Resultado", worksheet);
+                        int columna_resultado = dgv_grilla.Rows.Count + 9;
+                        cabecera(5, columna_resultado, dgv_resultado, worksheet);
+                        criterios(6, columna_resultado, false, dgv_resultado, worksheet);
+                        vertical(6,  letra_columna(columna_resultado), dgv_resultado, worksheet);
+                        celdas(6, columna_resultado, dgv_resultado, worksheet);
+                        mensaje(letra_columna(columna_resultado) + "3", "Matriz Resultado", worksheet);
 
                         //Guardado
                         workbook.SaveAs(sfd.FileName);
@@ -194,6 +198,117 @@ namespace Decisiones_en_Escenarios_Complejos
                 worksheet.Cell(fila_fija, j + columna_inicial).DataType = XLDataType.Text;
             }
 
+        }
+
+
+        private static string letra_columna(int nro_columna)
+        {
+            string letra;
+            switch (nro_columna)
+            {
+                case 1:
+                    letra = "A";
+                    break;
+
+                case 2:
+                    letra = "B";
+                    break;
+
+                case 3:
+                    letra = "C";
+                    break;
+                case 4:
+                    letra = "D";
+                    break;
+                case 5:
+                    letra = "E";
+                    break;
+                case 6:
+                    letra = "F";
+                    break;
+                case 7:
+                    letra = "G";
+                    break;
+                case 8:
+                    letra = "H";
+                    break;
+                case 9:
+                    letra = "I";
+                    break;
+                case 10:
+                    letra = "J";
+                    break;
+                case 11:
+                    letra = "K";
+                    break;
+                case 12:
+                    letra = "L";
+                    break;
+
+                case 13:
+                    letra = "M";
+                    break;
+
+                case 14:
+                    letra = "N";
+                    break;
+
+
+                case 15:
+                    letra = "O";
+                    break;
+
+
+                case 16:
+                    letra = "P";
+                    break;
+
+
+                case 17:
+                    letra = "Q";
+                    break;
+
+                case 18:
+                    letra = "R";
+                    break;
+
+                case 19:
+                    letra = "S";
+                    break;
+
+                case 20:
+                    letra = "T";
+                    break;
+
+                case 21:
+                    letra = "U";
+                    break;
+
+                case 22:
+                    letra = "V";
+                    break;
+
+                case 23:
+                    letra = "W";
+                    break;
+
+                case 24:
+                    letra = "X";
+                    break;
+
+                case 25:
+                    letra = "Y";
+                    break;
+
+                case 26:
+                    letra = "Z";
+                    break;
+                default:
+                    letra = "AA";
+                    break;
+            }
+
+            return letra;
         }
     }
 }
