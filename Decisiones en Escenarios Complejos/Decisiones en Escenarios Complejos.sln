@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decisiones en Escenarios Complejos", "Decisiones en Escenarios Complejos\Decisiones en Escenarios Complejos.csproj", "{88EDC601-82CD-4D19-823A-E136A8413538}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupDecisionesEnEscenariosComplejos", "SetupDecisionesEnEscenariosComplejos\SetupDecisionesEnEscenariosComplejos.vdproj", "{B3DEC14F-FE89-4E17-8297-6482AF0C249F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupTopsis-kHING", "SetupTopsis-kHING\SetupTopsis-kHING.vdproj", "{83E62F98-914C-45AD-9AEB-B37DDEFF6F42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{88EDC601-82CD-4D19-823A-E136A8413538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88EDC601-82CD-4D19-823A-E136A8413538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88EDC601-82CD-4D19-823A-E136A8413538}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3DEC14F-FE89-4E17-8297-6482AF0C249F}.Debug|Any CPU.ActiveCfg = Debug
-		{B3DEC14F-FE89-4E17-8297-6482AF0C249F}.Release|Any CPU.ActiveCfg = Release
+		{83E62F98-914C-45AD-9AEB-B37DDEFF6F42}.Debug|Any CPU.ActiveCfg = Debug
+		{83E62F98-914C-45AD-9AEB-B37DDEFF6F42}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
