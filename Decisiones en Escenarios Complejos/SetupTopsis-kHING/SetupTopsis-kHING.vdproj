@@ -22,7 +22,7 @@
         "Entry"
         {
         "MsmKey" = "8:_1BABB42E7E205624F49734E4AA98094F"
-        "OwnerKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+        "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -34,37 +34,49 @@
         "Entry"
         {
         "MsmKey" = "8:_2082E11C41347E81A8BC5C83DE37031B"
-        "OwnerKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_378637ADD7BC44F5BE994B7FB153A335"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4D9DFC7293545264CE7134C2EF3EFE58"
-        "OwnerKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+        "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_57CE102DFBD4B068F5B89E238EB300EC"
-        "OwnerKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+        "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+        "MsmKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BBF419536C9E4297A5B4FB80CAA5EEEA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D043C81593214CE28E610C4C538085FC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+        "OwnerKey" = "8:_4D9DFC7293545264CE7134C2EF3EFE58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -83,12 +95,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2082E11C41347E81A8BC5C83DE37031B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D9DFC7293545264CE7134C2EF3EFE58"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -240,26 +246,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_378637ADD7BC44F5BE994B7FB153A335"
-            {
-            "SourcePath" = "8:D:\\Mis Cosas\\Desktop\\icono.ico"
-            "TargetName" = "8:icono.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_ED4CADD7EB3A45B5902F5440160C5D43"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4D9DFC7293545264CE7134C2EF3EFE58"
             {
             "AssemblyRegister" = "3:1"
@@ -322,6 +308,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBF419536C9E4297A5B4FB80CAA5EEEA"
+            {
+            "SourcePath" = "8:..\\Decisiones en Escenarios Complejos\\Manual\\Manual de Usuario v1.0.pdf"
+            "TargetName" = "8:Manual de Usuario v1.0.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_F537A8CD6530420FAB636E6A0A2F8338"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D043C81593214CE28E610C4C538085FC"
+            {
+            "SourcePath" = "8:D:\\Mis Cosas\\Desktop\\icono.ico"
+            "TargetName" = "8:icono.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_ED4CADD7EB3A45B5902F5440160C5D43"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -360,6 +386,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_F537A8CD6530420FAB636E6A0A2F8338"
+                    {
+                    "Name" = "8:Manual"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_794FF0C904DA4876BD8A3C0DFA7220F3"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -378,15 +415,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Topsis-kHING"
-        "ProductCode" = "8:{689C37A7-3D05-4969-B81E-7739EDE76979}"
-        "PackageCode" = "8:{9082E655-86D5-46B0-BABF-4342292DA8E4}"
+        "ProductCode" = "8:{484E6569-924D-425E-AAC5-9FADF314A372}"
+        "PackageCode" = "8:{17C6FB0A-74A9-412D-9C2E-64497F2C4B54}"
         "UpgradeCode" = "8:{C6334395-F95F-4DAE-985A-1FAE9EF6989F}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.3.1"
+        "ProductVersion" = "8:1.4.0"
         "Manufacturer" = "8:KHING"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -396,7 +433,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_D043C81593214CE28E610C4C538085FC"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -499,7 +536,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B81A0F0FB5FC48A793BDBD49AF05823C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FD57048E2A9A41A7A54BB54ACCA45395"
             {
             "Name" = "8:Topsis-kHING"
             "Arguments" = "8:"
@@ -507,10 +544,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C19FABC73DB34234A86B08F58FD5574D"
+            "Target" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
             "Folder" = "8:_A3B806684A054149996B9298C119DDE5"
             "WorkingFolder" = "8:_ED4CADD7EB3A45B5902F5440160C5D43"
-            "Icon" = "8:_378637ADD7BC44F5BE994B7FB153A335"
+            "Icon" = "8:_D043C81593214CE28E610C4C538085FC"
             "Feature" = "8:"
             }
         }
@@ -912,7 +949,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C19FABC73DB34234A86B08F58FD5574D"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5ED06CEF65264D25BE5611CD400FDB28"
             {
             "SourcePath" = "8:..\\Decisiones en Escenarios Complejos\\obj\\Debug\\Decisiones en Escenarios Complejos.exe"
             "TargetName" = "8:"
