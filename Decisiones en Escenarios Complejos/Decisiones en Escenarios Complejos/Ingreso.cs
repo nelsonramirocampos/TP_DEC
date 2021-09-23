@@ -397,8 +397,10 @@ namespace Decisiones_en_Escenarios_Complejos
                                         nombre_alt = v.ToString().Trim().ToUpper();
                                     }
                                 }
-
-                                gestor.agregarAlternativa(nombre_alt, valores);
+                                if (string.IsNullOrWhiteSpace(nombre_alt) == false)
+                                {
+                                    gestor.agregarAlternativa(nombre_alt, valores);
+                                }
                             }
                         }
 

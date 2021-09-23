@@ -50,7 +50,7 @@ namespace Decisiones_en_Escenarios_Complejos.Importador
             }
 
 
-            for (int i = 0; i < this.Alternativas.Count-2; i++)
+            for (int i = 0; i < this.Alternativas.Count; i++)
             {
                 grilla.Rows.Add(this.Alternativas[i].Alternativa_nueva);
 

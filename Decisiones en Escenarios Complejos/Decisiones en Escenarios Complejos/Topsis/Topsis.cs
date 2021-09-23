@@ -344,7 +344,7 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
             //El recorrido por la matriz sera de columna a filas
             for (int columna = 1; columna < Dgv_matriz_pre_normalizada.Columns.Count; columna++)
             {
-                Int64 acumulador_fila = 0;
+                double acumulador_fila = 0;
 
                 //Se recorre cada fila
                 for (int fila = 1; fila < Dgv_matriz_pre_normalizada.Rows.Count - 2; fila++)
@@ -352,7 +352,7 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
                     //Se eleva al cuadrado cada elemento de la matriz
                     Dgv_matriz_pre_normalizada[columna, fila].Value = Math.Pow(Convert.ToDouble(Dgv_matriz_pre_normalizada[columna, fila].Value), 2);
 
-                    acumulador_fila = acumulador_fila + Convert.ToInt64(Dgv_matriz_pre_normalizada[columna, fila].Value);
+                    acumulador_fila = acumulador_fila + Convert.ToDouble(Dgv_matriz_pre_normalizada[columna, fila].Value);
                 }
 
                 Dgv_matriz_pre_normalizada[columna, Dgv_matriz_pre_normalizada.Rows.Count - 2].Value = acumulador_fila; //Acumulador por columna
