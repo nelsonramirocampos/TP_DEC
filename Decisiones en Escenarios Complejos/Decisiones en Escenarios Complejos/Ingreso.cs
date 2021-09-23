@@ -2,6 +2,7 @@
 using Decisiones_en_Escenarios_Complejos.Topsis;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -461,6 +462,13 @@ namespace Decisiones_en_Escenarios_Complejos
 
                 txt.KeyPress += new KeyPressEventHandler(Dgv_pesos_KeyPress);
             }
+        }
+
+        private void ManualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(Application.StartupPath);
+            ProcessStartInfo startInfo = new ProcessStartInfo(Application.StartupPath + "\\Manual\\Manual de Usuario v1.0.pdf");
+            Process.Start(startInfo);
         }
     }
 }
