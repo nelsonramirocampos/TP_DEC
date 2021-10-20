@@ -24,6 +24,10 @@ namespace Decisiones_en_Escenarios_Complejos
 
             cb_metodo.Items.Add(Constantes.METODO_TOPSIS);
             cb_metodo.SelectedIndex = 0;
+            cb_distancia.Items.Add("P=1 -> Distancia Ciudad");
+            cb_distancia.Items.Add("P=2 -> Distancia Euclídea");
+            //cb_distancia.Items.Add("P=∞ -> lim ∞ = MAXj |xj-yj|");
+            cb_distancia.SelectedIndex = 1;
 
             dgv_matriz.Columns.Add("", "");
             dgv_matriz.Rows.Add();
@@ -105,9 +109,26 @@ namespace Decisiones_en_Escenarios_Complejos
 
             if (cb_metodo.Text == Constantes.METODO_TOPSIS)
             {
-                frm_topsis t = new frm_topsis(this, dgv_matriz, dgv_pesos);
+                Int64 p = obtenerDistancia();
+                frm_topsis t = new frm_topsis(this, dgv_matriz, dgv_pesos, p);
                 t.Show();
             }
+        }
+
+        private long obtenerDistancia()
+        {
+            String distancia = cb_distancia.SelectedItem.ToString();
+            
+            if (distancia.Contains("Ciudad"))
+            {
+                return 1;
+            }
+            else if (distancia.Contains("Euclídea"))
+            {
+                return 2;
+            }
+
+            return -1;
         }
 
         private bool validarNumerosPesos(DataGridView grilla)
