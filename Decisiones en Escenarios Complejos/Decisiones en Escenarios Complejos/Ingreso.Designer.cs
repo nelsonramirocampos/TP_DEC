@@ -60,6 +60,8 @@
             this.cb_metodo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_limpiar = new System.Windows.Forms.Button();
+            this.cb_distancia = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -171,9 +173,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgv_matriz);
-            this.panel1.Location = new System.Drawing.Point(12, 133);
+            this.panel1.Location = new System.Drawing.Point(12, 158);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 206);
+            this.panel1.Size = new System.Drawing.Size(618, 186);
             this.panel1.TabIndex = 6;
             // 
             // dgv_matriz
@@ -195,7 +197,7 @@
             this.dgv_matriz.RowHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgv_matriz.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_matriz.Size = new System.Drawing.Size(618, 206);
+            this.dgv_matriz.Size = new System.Drawing.Size(618, 186);
             this.dgv_matriz.TabIndex = 0;
             this.dgv_matriz.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Dgv_matriz_EditingControlShowing);
             this.dgv_matriz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Dgv_matriz_KeyPress);
@@ -304,24 +306,26 @@
             // manualToolStripMenuItem
             // 
             this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.ManualToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.AcercaDeToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cb_distancia);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.cb_metodo);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(12, 76);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(290, 51);
+            this.groupBox3.Size = new System.Drawing.Size(290, 76);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Seleccione Método";
@@ -353,6 +357,24 @@
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.Btn_limpiar_Click);
+            // 
+            // cb_distancia
+            // 
+            this.cb_distancia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_distancia.FormattingEnabled = true;
+            this.cb_distancia.Location = new System.Drawing.Point(84, 46);
+            this.cb_distancia.Name = "cb_distancia";
+            this.cb_distancia.Size = new System.Drawing.Size(192, 21);
+            this.cb_distancia.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Distancia:";
             // 
             // Ingreso
             // 
@@ -420,5 +442,7 @@
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.ToolStripMenuItem cargarEjemploToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cb_distancia;
+        private System.Windows.Forms.Label label5;
     }
 }

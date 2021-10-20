@@ -25,7 +25,9 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
         private DataGridView dgv_matriz_final;
         private DataGridView dgv_resultado;
 
-        public Topsis()
+        private Int64 p; //Distancia
+
+        public Topsis(Int64 p)
         {
             this.dgv_matriz_original = new DataGridView();
             this.dgv_pesos_original = new DataGridView();
@@ -37,6 +39,7 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
             this.dgv_matriz_a_menos = new DataGridView();
             this.dgv_matriz_final = new DataGridView();
             this.dgv_resultado = new DataGridView();
+            this.p = p;
         }
 
         public DataGridView Dgv_matriz_original { get => dgv_matriz_original; set => dgv_matriz_original = value; }
@@ -180,7 +183,7 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
                     Double vij = Convert.ToDouble(Dgv_matriz_a_menos[indice_columna, indice_fila].Value); //El valor de la matriz
                     Double vj = Convert.ToDouble(alternativa_A_menos.Cells[indice_columna].Value); //El valor de la alternativa A- segun la columna
 
-                    Dgv_matriz_a_menos[indice_columna, indice_fila].Value = Utilidad.redondear(Math.Pow(Math.Abs(vij - vj), 2));
+                    Dgv_matriz_a_menos[indice_columna, indice_fila].Value = Utilidad.redondear(Math.Pow(Math.Abs(vij - vj), this.p));
                 }
             }
 
@@ -230,7 +233,7 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
                     Double vij = Convert.ToDouble(Dgv_matriz_a_mas[indice_columna, indice_fila].Value); //El valor de la matriz
                     Double vj = Convert.ToDouble(alternativa_A_mas.Cells[indice_columna].Value); //El valor de la alternativa A+ segun la columna
 
-                    Dgv_matriz_a_mas[indice_columna, indice_fila].Value = Utilidad.redondear(Math.Pow(Math.Abs(vij - vj), 2));
+                    Dgv_matriz_a_mas[indice_columna, indice_fila].Value = Utilidad.redondear(Math.Pow(Math.Abs(vij - vj), this.p));
                 }
             }
 

@@ -18,13 +18,13 @@ namespace Decisiones_en_Escenarios_Complejos.Topsis
         private Ingreso frm_ingreso;
         
 
-        public frm_topsis(Ingreso ingreso, DataGridView matriz, DataGridView pesos)
+        public frm_topsis(Ingreso ingreso, DataGridView matriz, DataGridView pesos, Int64 p)
         {
             InitializeComponent();
 
             this.frm_ingreso = ingreso;
 
-            this.topsis = new Topsis();
+            this.topsis = new Topsis(p);
             topsis.Dgv_matriz_original = matriz;
             topsis.Dgv_pesos_original = pesos;
 
