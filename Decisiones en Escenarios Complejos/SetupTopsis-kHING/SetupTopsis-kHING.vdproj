@@ -70,12 +70,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D9DFC7293545264CE7134C2EF3EFE58"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5ED06CEF65264D25BE5611CD400FDB28"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -95,6 +89,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2082E11C41347E81A8BC5C83DE37031B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4D9DFC7293545264CE7134C2EF3EFE58"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -154,6 +154,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -415,15 +423,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Topsis-kHING"
-        "ProductCode" = "8:{484E6569-924D-425E-AAC5-9FADF314A372}"
-        "PackageCode" = "8:{17C6FB0A-74A9-412D-9C2E-64497F2C4B54}"
+        "ProductCode" = "8:{76E2FE4C-78F2-4A77-8739-A09207647E17}"
+        "PackageCode" = "8:{5B114BCA-3308-4EFD-AECC-D82B9508CC0B}"
         "UpgradeCode" = "8:{C6334395-F95F-4DAE-985A-1FAE9EF6989F}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.4.0"
+        "ProductVersion" = "8:1.4.1"
         "Manufacturer" = "8:KHING"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
