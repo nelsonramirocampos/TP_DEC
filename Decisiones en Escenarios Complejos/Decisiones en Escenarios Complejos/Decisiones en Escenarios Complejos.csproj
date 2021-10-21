@@ -130,7 +130,7 @@
     <EmbeddedResource Include="Topsis\frm_topsis.resx">
       <DependentUpon>frm_topsis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manual\Manual de Usuario v1.0.pdf">
+    <EmbeddedResource Include="Manual\Manual de Usuario v2.0.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -57,7 +57,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BBF419536C9E4297A5B4FB80CAA5EEEA"
+        "MsmKey" = "8:_A712F9A4BECB4B8F84C5D97E03715EE0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -316,10 +316,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BBF419536C9E4297A5B4FB80CAA5EEEA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A712F9A4BECB4B8F84C5D97E03715EE0"
             {
-            "SourcePath" = "8:..\\Decisiones en Escenarios Complejos\\Manual\\Manual de Usuario v1.0.pdf"
-            "TargetName" = "8:Manual de Usuario v1.0.pdf"
+            "SourcePath" = "8:D:\\Mis Cosas\\Downloads\\Nueva carpeta (4)\\Manual de Usuario v2.0_ Grupo_1.pdf"
+            "TargetName" = "8:Manual de Usuario v2.0.pdf"
             "Tag" = "8:"
             "Folder" = "8:_F537A8CD6530420FAB636E6A0A2F8338"
             "Condition" = "8:"
