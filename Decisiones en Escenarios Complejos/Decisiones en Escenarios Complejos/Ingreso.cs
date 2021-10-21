@@ -488,7 +488,7 @@ namespace Decisiones_en_Escenarios_Complejos
         private void ManualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(Application.StartupPath);
-            ProcessStartInfo startInfo = new ProcessStartInfo(Application.StartupPath + "\\Manual\\Manual de Usuario v1.0.pdf");
+            ProcessStartInfo startInfo = new ProcessStartInfo(Application.StartupPath + "\\Manual\\Manual de Usuario v2.0.pdf");
             Process.Start(startInfo);
         }
     }
